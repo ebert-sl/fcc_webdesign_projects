@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <fieldset>
+      <form id="survey-form">
+        <article>
+          <label for="name" id="name-label">
+            Name
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter your name"
+              required
+            />
+          </label>
+          <label for="email" id="email-label">
+            Email
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+          </label>
+          <label for="number" id="number-label">
+            Age (optional)
+            <input
+              id="number"
+              type="number"
+              placeholder="Age"
+              min="16"
+              max="120"
+            />
+          </label>
+        </article>
+        <article>
+          Which option best describes your current role?
+          <select id="dropdown">
+            <option>Select current role</option>
+            <option>Student</option>
+            <option>Full Time Job</option>
+            <option>Full Time Learner</option>
+            <option>Prefer not to say</option>
+            <option>Other</option>
+          </select>
+        </article>
+        <article>
+          Would you recommend freeCodeCamp to a friend?
+          <label for="definitely">
+            <input
+              id="definitely"
+              type="radio"
+              name="recommend"
+              value="definitely"
+            />
+            Definitely
+          </label>
+          <label for="maybe">
+            <input 
+              id="maybe" 
+              type="radio" 
+              name="recommend" 
+              value="maybe" />
+            Maybe
+          </label>
+          <label for="not_sure">
+            <input
+              id="not_sure"
+              type="radio"
+              name="recommend"
+              value="not_sure"
+            />
+            Not sure
+          </label>
+        </article>
+        <article>
+          What would you like to see improved? (Check all that apply)
+          <label for="front-end_projects">
+            <input
+              id="front-end_projects"
+              type="checkbox"
+              value="front-end_projects"
+            />
+            Front-end Projects
+          </label>
+          <label for="back-end_projects">
+            <input
+              id="back-end_projects"
+              type="checkbox"
+              value="back-end_projects"
+            />
+            Back-end Projects
+          </label>
+          <label for="data_visualization">
+            <input
+              id="data_visualization"
+              type="checkbox"
+              value="data_visualization"
+            />
+            Data Visualization
+          </label>
+          <label for="challenges">
+            <input 
+              id="challenges" 
+              type="checkbox" 
+              value="challenges" />
+            Challenges
+          </label>
+          <label for="open_source_community">
+            <input
+              id="open_source_community"
+              type="checkbox"
+              value="open_source_community"
+            />
+            Open Source Community
+          </label>
+          <label for="gitter_help_rooms">
+            <input
+              id="gitter_help_rooms"
+              type="checkbox"
+              value="gitter_help_rooms"
+            />
+            Gitter help rooms
+          </label>
+          <label for="videos">
+            <input 
+              id="videos" 
+              type="checkbox" 
+              value="videos" /> Videos
+          </label>
+          <label for="city_meetups">
+            <input 
+              id="city_meetups" 
+              type="checkbox" 
+              value="city_meetups" />
+            City Meetups
+          </label>
+          <label for="wiki">
+            <input 
+              id="wiki" 
+              type="checkbox" 
+              value="wiki" /> Wiki
+          </label>
+          <label for="forum">
+            <input 
+              id="forum" 
+              type="checkbox" 
+              value="forum" /> Forum
+          </label>
+          <label for="additional_courses">
+            <input
+              id="additional_courses"
+              type="checkbox"
+              value="additional_courses"
+            />
+            Additional Courses
+          </label>
+        </article>
+        <article>
+          Any comments or suggestions?
+          <textarea placeholder="Enter your comment here"></textarea>
+        </article>
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+    </fieldset>
+  </body>
+</html>

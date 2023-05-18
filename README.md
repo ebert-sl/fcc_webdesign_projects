@@ -1,5 +1,5 @@
 # freeCodeCamp Projects
 
-Welcome! Here will be republished my uploaded projects in freeCodeCamp website!
+Welcome! Here are my uploaded projects in freeCodeCamp website!
 
-They can be checked too in my fCC profile: https://www.freecodecamp.org/the_lsie
+fCC profile: https://www.freecodecamp.org/the_lsie

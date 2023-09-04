@@ -1,5 +1,3 @@
-# freeCodeCamp Projects
+# Projetos da freeCodeCamp (Responsive Web Design)
 
-Welcome! Here are my uploaded projects in freeCodeCamp website!
-
-fCC profile: https://www.freecodecamp.org/the_lsie
+Repositório dos projetos realizados para a certificação em Web Design Responsivo do site freeCodeCamp.

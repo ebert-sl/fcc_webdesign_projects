@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  font-size: 62.5% /* 10 px */ ;
+  margin: 0;
+  font-family: Roboto;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #A9D9D0;
+}
+
+main {
+  padding-top: 160px;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-family: 'Kode Mono';
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#image {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+#img-caption {
+  margin-top: 5px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+#tribute-info {
+  background: #F2E7DC;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+#tribute-content {
+  margin: auto;
+  max-width: 50%;
+  text-align: justify;
+}
+
+ul {
+  padding: 0;
+}
+
+li, b, i, p, a {
+  font-size: 1.6rem;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+

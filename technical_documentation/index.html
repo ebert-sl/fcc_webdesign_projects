@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+    <header>Documentação CSS</header>
+    <div class="links">
+      <a class="nav-link" href=#Introdução>Introdução</a>
+      <a class="nav-link" href=#Pré-requisitos>Pré-requisitos</a>
+      <a class="nav-link" href=#Como_CSS_é_estruturado?>Como CSS é estruturado?</a>
+      <a class="nav-link" href=#Seletores>Seletores</a>
+      <a class="nav-link" href=#Propriedades_e_valores>Propriedades e valores</a>
+      <a class="nav-link" href=#Referências>Referências</a>
+    </div>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introdução">
+        <header>Introdução</header>
+        <p><b>CSS (Cascading Style Sheets ou Folhas de Estilo em Cascata)</b> é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou em XML (incluindo várias linguagens em XML como SVG, MathML ou XHTML). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.</p>
+      </section>
+      <section class="main-section" id="Pré-requisitos">
+        <header>Pré-requisitos</header>
+        <ol>
+          <li>Familiaridade básica com o uso de computadores e utilização da internet passivamente (Ex: vendo e consumindo o conteúdo).</li>
+          <li>Um ambiente de trabalho básico configurado conforme detalhado em Instalando Software Básico e um entendimento de como criar e gerenciar arquivos, conforme detalhado em Lidando com Arquivos.</li>
+          <li>Familiaridade básica com HTML, como discutido no módulo Introdução ao HTML.</li>
+        </ol>
+      </section>
+      <section class="main-section" id="Como_CSS_é_estruturado?">
+        <header>Como CSS é estruturado?</header>
+        <h2>Folha de Estilos Externa</h2>
+        <p>Isso é o método mais comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
+        </p>
+        <h3>HTML</h3>
+        <pre>
+          <code>
+            &lt;html>
+              &lt;head>
+                &lt;meta charset="utf-8" />
+                &lt;title>My CSS experiment&lt;/title>
+                &lt;link rel="stylesheet" href="styles.css" />
+              &lt;/head>
+              &lt;body>
+                &lt;h1>Hello World!&lt;/h1>
+                &lt;p>This is my first CSS example&lt;/p>
+              &lt;/body>
+            &lt;/html>
+          </code></pre>
+        <h3>CSS</h3>
+        <pre>
+          <code>
+            h1 {
+              color: blue;
+              background-color: yellow;
+              border: 1px solid black;
+            }
+
+            p {
+              color: red;
+            }
+          </code></pre>
+        <p>O atributo <code>href</code> do elemento <code>&lt;link></code>, precisa fazer referência a um arquivo em nosso sistema de arquivos.</p>
+        <h2>Folha de estilos interna</h2>
+        <p>Uma folha de estilos interna é usada quando você não tem um arquivo CSS externo, mas, ao contrário, coloca seu CSS dentro de elemento <code>&lt;style></code> localizado no <code>&lt;head></code> do documento HTML.
+
+Deste modo, seu HTML se parecerá assim:</p>
+      <h3>HTML</h3>
+      <pre>
+        <code>
+          &lt;!doctype html>
+          &lt;html>
+            &lt;head>
+              &lt;meta charset="utf-8" />
+              &lt;title>My CSS experiment&lt;/title>
+              &lt;style>
+                h1 {
+                  color: blue;
+                  background-color: yellow;
+                  border: 1px solid black;
+                }
+
+                p {
+                  color: red;
+                }
+              &lt;/style>
+            &lt;/head>
+            &lt;body>
+              &lt;h1>Hello World!&lt;/h1>
+              &lt;p>This is my first CSS example&lt;/p>
+            &lt;/body>
+          &lt;/html>
+        </code></pre>
+        <h2>Estilos inline</h2>
+        <p>Estilos inline são declarações CSS que afetam apenas um determinado elemento, inserido em um atributo <code>style</code>:</p>
+        <h3>HTML</h3>
+        <pre>
+          <code>
+            &lt;!doctype html>
+            &lt;html>
+              &lt;head>
+                &lt;meta charset="utf-8" />
+                &lt;title>My CSS experiment&lt;/title>
+              &lt;/head>
+              &lt;body>
+                &lt;h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+                  Hello World!
+                &lt;/h1>
+                &lt;p style="color:red;">This is my first CSS example&lt;/p>
+              &lt;/body>
+            &lt;/html>
+          </code></pre>
+          <p><b>Por favor, não utilize isso a menos que seja estritamente necessário!</b> É péssimo para manutenção (você precisará atualizar a mesma informação diversas vezes em cada documento), além do que, mistura sua informação de estilização do CSS com sua informação de estrutura HTML, tornando seu código de difícil leitura e compreensão. Manter diferentes tipos de código separados torna o trabalho muito mais fácil para todos os que trabalham no código.
+          </p>
+      </section>
+      <section class="main-section" id="Seletores">
+        <header>Seletores</header>
+        <p>Não é possível falar de CSS sem conhecer os seletores, e nós já descobrimos vários tipos diferentes no tutorial Começando com o Css. Um seletor é o modo pelo qual nós apontamos para alguma coisa no nosso documento HTML para aplicar os estilos à ela. Se os seus estilos não forem aplicados, então é provável que o seu seletor não esteja ligado aquilo que você pensa que ele deveria.</p>
+        <p>Cada regra CSS começa com um seletor ou uma lista de seletores para informar ao navegador em qual elemento ou elementos as regras devem ser aplicadas. Todos os exemplos a seguir são válidos como seletores ou listas de seletores.</p>
+        <pre>
+          <code>
+            h1
+            a:link
+            .manythings
+            #onething
+            *
+            .box p
+            .box p:first-child
+            h1, h2, .intro
+          </code></pre>
+      </section>
+      <section class="main-section" id="Propriedades_e_valores">
+        <header>Propriedades e valores</header>
+        <p>Em seu nível mais básico, CSS consiste em dois blocos de construção:</p>
+        <ul>
+          <li><b>Propriedades</b>: Identificadores legíveis para humanos que indicam quais características estilísticas (por exemplo, <code>font-size</code>, <code>width</code>, <code>background-color</code>) que você deseja alterar.</li>
+          <li><b>Valores</b>: Cada propriedade especificada recebe um valor, que indica como você deseja alterar essas características estilísticas (por exemplo, o que deseja mudar a fonte, a largura ou a cor de fundo para).</li>
+        </ul>
+        <p>O código abaixo destaca uma única propriedade e valor. O nome da propriedade é color e o valor é blue.</p>
+        <pre>
+          <code>
+            h1 {
+              color: blue;
+            }
+          </code></pre>
+        <p>Uma propriedade associada a um valor é chamada de <i>Declaração CSS</i>. As declarações CSS são colocadas dentro de <i>Blocos de Declaração CSS</i>. Por fim, blocos de declarações CSS são pareados com <i>seletores</i> para produzir <i>Conjuntos de Regras CSS</i> (ou <i>Regras CSS</i>).</p>
+      </section>
+      <section class="main-section" id="Referências">
+        <header>Referências</header>
+        <ul>
+          <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS">MDN Web Docs - Aprenda a estilizar HTML utilizando CSS</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
